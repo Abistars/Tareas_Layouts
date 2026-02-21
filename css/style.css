@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: white;
+    padding-top: 60px;
+}
+
+header{
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+header h1{
+    font-family: 'Princess Sofia', cursive;
+    font-size: 55px;
+    letter-spacing: 2px;
+    margin-bottom: 10px
+}
+
+header p{
+    font-size: 18px;
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
+
+.menu{
+    display: grid;
+    grid-template-columns: repeat(2, 220px);
+    gap: 35px;
+}
+
+.card{
+    position: relative;
+    text-decoration: none;
+    padding: 30px;
+    text-align: center;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    background: linear-gradient(145deg, #1c2a3f, #243b55);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    transition: 0.4s ease;
+    overflow: hidden;
+}
+
+.card::before{
+    content: "✦";
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 18px;
+    opacity: 0.5;
+}
+
+.card::after{
+    content: "✦";
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    font-size: 18px;
+    opacity: 0.5;
+}
+
+.card:hover{
+    transform: translateY(-8px) scale(1.05);
+    background: linear-gradient(145deg, #00c6ff, #0072ff);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+}

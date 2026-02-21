@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    padding: 10px;  
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 200px 1fr 150px;           
+    grid-template-rows: auto 1fr 1fr auto;    
+    grid-template-areas: 
+        "header header header"
+        "b11    b2     b3"
+        "b12    b2     b3"
+        "footer footer footer";
+    gap: 10px;
+    height: 100vh;  
+}
+
+.item{
+    background-color: gray;
+    padding: 15px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.header{
+    grid-area: header;
+}
+
+.b11{
+    grid-area: b11;
+}
+
+.b12{
+    grid-area: b12;
+}
+
+.b2{
+    grid-area: b2;
+}
+
+.b3{
+    grid-area: b3;
+}
+
+.footer{
+    grid-area: footer;
+}
